@@ -8,20 +8,22 @@ class ProductModel extends Connection
 
     protected function findAll()
     {
-        $sql = "SELECT * FROM product";
-        $result = $this->connect()->query($sql); 
+        $sql = "SELECT * FROM stastay";
+        $result = $this->connect()->query($sql);
+        $stastay = [];
         if ($result->num_rows > 0) {
             while ($data = mysqli_fetch_assoc($result)) {
-                $product[] = $data;
+                $stastay[] = $data;
             }
         }
-        return $product;
+        return $stastay;
     }
 
     protected function findOne($id)
     {
-        $sql = "SELECT * FROM product WHERE id = " . $id;
+        $sql = "SELECT * FROM stastay WHERE id = " . $id;
         $result = $this->connect()->query($sql);
+        $product = [];
         if ($result->num_rows > 0) {
             while ($data = mysqli_fetch_assoc($result)) {
                 $product[] = $data;

@@ -4,13 +4,13 @@ class ProductView extends ProductController
 {
     public function show()
     {
-        $products = $this->getProducts(); 
-        foreach ($products as $product) { ?>
+        $stastay = $this->getProducts(); 
+        foreach ($stastay as $stastay) { ?>
         <tr>
-        <td><?php echo $product['id']; ?></td>
-        <td><?php echo $product['name']; ?></td>
-        <td><?php echo $product['price']; ?></td>
-        <td><?php echo $product['stock']; ?></td>
+        <td><?php echo $stastay['id']; ?></td>
+        <td><?php echo $stastay['name']; ?></td>
+        <td><?php echo $stastay['price']; ?></td>
+        <td><?php echo $stastay['stock']; ?></td>
         </tr>
         <?php
         }
